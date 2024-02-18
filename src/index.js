@@ -9,7 +9,6 @@ const plugin = (opts = {}) => {
     Once(root) {
       	root.walk(node => {
           if (node.type === 'comment') {
-            console.log(getIfdefCommentTargetPlat(node))
             
             const commentText = node.text.trim()
             
@@ -31,7 +30,7 @@ const plugin = (opts = {}) => {
             
             if (commentText.startsWith('endif')) {
               isRemove = false // 关闭标识 后续所有节点打上false标记
- 			        node.remove() // 删除条件编译的注释指令
+              node.remove() // 删除条件编译的注释指令
             }
           }
           // 根据isRemove来决定是否删除当前节点
