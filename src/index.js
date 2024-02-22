@@ -9,7 +9,6 @@ const plugin = (opts = {}) => {
     Once(root) {
       	root.walk(node => {
           if (node.type === 'comment') {
-            
             const commentText = node.text.trim()
             
             if (commentText.startsWith('ifdef')) {
