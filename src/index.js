@@ -28,11 +28,11 @@ const plugin = (opts = {}) => {
             }
             
             if (commentText.startsWith('endif')) {
-              isRemove = false // 关闭标识 后续所有节点打上false标记
+              isRemove = false // 状态机状态流转：关闭删除状态
               node.remove() // 删除条件编译的注释指令
             }
           }
-          // 根据isRemove来决定是否删除当前节点
+          // 根据此时状态isRemove来决定是否删除当前节点
           if (isRemove === true) node.remove()
         })
     }
