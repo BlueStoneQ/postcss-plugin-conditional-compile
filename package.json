@@ -1,6 +1,6 @@
 {
   "name": "postcss-plugin-conditional-compile",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "postcss postcss-plugin conditional-compile",
   "type": "module",
   "scripts": {
@@ -20,6 +20,10 @@
     "postcss-plugin",
     "conditional-compile"
   ],
+  "repository": {  
+    "type": "git",
+    "url": "https://github.com/BlueStoneQ/postcss-plugin-conditional-compile.git"
+  },
   "author": "qiaoyang",
   "license": "MIT",
   "dependencies": {
